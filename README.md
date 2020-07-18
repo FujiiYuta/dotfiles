@@ -11,7 +11,7 @@ $ sh setup.sh
 $ chmod +x brew.sh 
 $ sh brew.sh 
 $ chmod +x install_powerline.sh 
-$ sh install?powerline.sh
+$ sh install_powerline.sh
 
 ```
 
