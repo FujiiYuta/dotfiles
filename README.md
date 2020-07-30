@@ -10,8 +10,8 @@ $ chmod +x setup.sh
 $ sh setup.sh 
 $ chmod +x brew.sh 
 $ sh brew.sh 
-$ chmod +x install_powerline.sh 
-$ sh install_powerline.sh
+$ chmod +x install.sh 
+$ sh install.sh
 
 ```
 

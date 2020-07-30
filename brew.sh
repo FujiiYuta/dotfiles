@@ -18,6 +18,7 @@ formulas=(
     zsh
     tree
     peco
+    ndenv
 )
 
 echo "start brew install apps..."
@@ -34,6 +35,8 @@ casks=(
     slack
     alfred
     iterm
+    1password
+    gas-mask
     # ここからはできるかわからん
     evernote
     xcode

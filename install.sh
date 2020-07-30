@@ -17,3 +17,20 @@ echo "done."
 ### SourceCodeProのインストール
 
 cp -a source-code-pro-release/TTF/* ~/Library/Fonts
+
+### ndenvの設定
+echo "installing ndenv..."
+
+brew install ndenv
+
+echo 'export PATH="$HOME/.ndenv/bin:$PATH"' >> ~/.zshrc
+
+echo 'eval "$(ndenv init -)"' >> ~/.zshrc
+
+exec $SHELL -l
+
+git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-build
+
+ndenv -v
+
+echo "done."
