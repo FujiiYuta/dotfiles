@@ -34,3 +34,16 @@ git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-bui
 ndenv -v
 
 echo "done."
+
+### gitの補完設定
+echo "installing git completion..."
+
+mkdir -p ~/.zsh/completion
+
+curl -o ~/.zsh/completion/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+
+curl -o ~/.zsh/completion/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+
+source ~/.zshrc
+
+echo "all done."
