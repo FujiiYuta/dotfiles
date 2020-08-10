@@ -19,6 +19,8 @@ formulas=(
     tree
     peco
     ndenv
+    carthage
+    cocoapods
 )
 
 echo "start brew install apps..."
