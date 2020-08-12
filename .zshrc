@@ -8,6 +8,16 @@ alias ~='cd ~'
 
 alias ...='cd ../..'
 
+export PATH=/Users/yutafuj/.ndenv/bin:/Users/yutafuj/.ndenv/bin:/Users/yutafuj/.ndenv/bin:/Users/yutafuj/.ndenv/bin:/Users/yutafuj/.zinit/polaris/sbin:/Users/yutafuj/.zinit/polaris/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.local/bin
+
+export PATH=/usr/local/bin:$PATH
+
+source .zshenv
+
+### powerline設定
+. /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -24,11 +34,13 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
+    zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+
 
 ### Added by Yuta for Plugin
 
@@ -37,6 +49,7 @@ zinit ice wait'!0'; zinit load zsh-users/zsh-syntax-highlighting # 実行可能�
 zinit ice wait'!0'; zinit load zsh-users/zsh-completions # 補完
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh # 補完候補表示
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
 zinit light norman-abramovitz/cf-zsh-autocomplete-plugin # cfコマンドの補完候補表示
 
@@ -55,11 +68,6 @@ zstyle ':completion:*' list-colors '' # 補完候補一覧をカラー表示
 setopt no_beep # ビープ音停止
 
 setopt nolistbeep # 補完時ビープ音停止
-
-### powerline系の設定
-source ~/.bashrc
-powerline-daemon -q
-. /Library/Python/3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 ### ls時の色の設定
 export LSCOLORS=Exfxcxdxbxegedabagacad

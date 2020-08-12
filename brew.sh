@@ -1,5 +1,8 @@
 #!/bin/sh -xe
 
+echo "Hi, New Mac!!"
+chsh -s /bin/zsh
+
 echo "installing homebrew..."
 which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -14,6 +17,7 @@ echo "ok. run brew upgrade..."
 brew upgrade
 
 formulas=(
+    emacs
     git
     zsh
     tree
@@ -21,6 +25,7 @@ formulas=(
     ndenv
     carthage
     cocoapods
+    python
 )
 
 echo "start brew install apps..."
@@ -36,13 +41,13 @@ casks=(
     google-chrome
     slack
     alfred
-    iterm
+    iterm2
     1password
     gas-mask
-    # ここからはできるかわからん
+    cyberduck
     evernote
-    xcode
     clipy
+    dash
 )
 
 echo "start brew cask install apps..."

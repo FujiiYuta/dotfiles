@@ -4,11 +4,11 @@
 ### powerlineのインストール
 echo "installing powerline..."
 
-pip install powerline-status
+pip3 install powerline-status
 
-pip install  --user git+git://github.com/powerline/powerline
+pip3 show powerline-status
 
-ln -s /Library/Python/3.7/site-packages/powerline ~/.local/bin
+echo '. /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh' >> ~/.zshrc
 
 source ~/.zshrc
 
@@ -45,5 +45,9 @@ curl -o ~/.zsh/completion/git-completion.bash https://raw.githubusercontent.com/
 curl -o ~/.zsh/completion/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 
 source ~/.zshrc
+
+echo "screenshot config"
+
+defaults write com.apple.screencapture location ~/SS/;killall SystemUIServer
 
 echo "all done."

@@ -36,7 +36,9 @@ HotKey: のテキストボックスを選択しRecording状態になったら**c
 
 セットアップ済みなので入っているはず
 
-## color
+iterm > preferences > profiles > font > sourcecodepro
+
+### color
 
 Preferences > Colors > Load Presets > Import
 
@@ -45,3 +47,9 @@ Preferences > Colors > Load Presets > Import
 ## shell
 
 General > Command > /bin/zsh
+
+## System Preferences
+
+- 入力ソース > 前の入力ソースを選択　のチェックを外す
+
+- spotlight > spotlight検索を表示　も外す
