@@ -31,7 +31,18 @@ exec $SHELL -l
 
 git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-build
 
+ndenv install v10.15.3
+
+ndenv global v10.15.3
+
+echo 'ndenv version is'
 ndenv -v
+
+echo 'node version is'
+node -v
+
+echo 'npm version is'
+npm -v
 
 echo "done."
 
